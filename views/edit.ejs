@@ -1,0 +1,19 @@
+<%- include("./partials/head.ejs") %> 
+<body>
+    <h1>Make Your Own <%=pokemon.name %></h1>
+    <img src="<%=pokemon.img %>" alt="picture of <%pokemon.name%>" style="width:50%; height:50%; border:0">
+    <form action="/pokemon/<%=index %>?_method=PUT" method="POST">
+      Name: <input type="text" name="name" placeholder="Name"><br>
+      Image URL: <input type="text" name="img" placeholder="Image URL"><br>
+      Type: 
+      <input type="text" name="type[]" placeholder="Type(s)"/><br>
+      Health: 
+      <input type="text" name="stats[hp]" placeholder="HP" /><br>
+      Attack: 
+      <input type="text" name="stats[attack]" placeholder="Attack" /><br>
+      Defense: 
+      <input type="text" name="stats[defense]" placeholder="Defense" /><br>
+      <input type="submit" value="Update Pokemon" >
+    </form>
+  </body>
+</html>

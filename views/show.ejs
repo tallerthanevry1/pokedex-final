@@ -1,0 +1,30 @@
+<%- include("./partials/head.ejs") %> 
+
+
+<body>
+    <div class="container">
+
+            
+            
+        <h5> <%=pokemon.name%> </h5>
+        <img src="<%=pokemon.img%>" /> <br>
+            <ul>
+                <h4>Type:</h4>
+                <li><%=pokemon.type[0]%></li>
+                <li><%=pokemon.type[1]%></li>
+            </ul>
+    
+        <tr>
+            <h4>Stats:</h4>
+            <td>HP: <%=pokemon.stats.hp%></td><br>
+            <td>Attack: <%=pokemon.stats.attack%></td><br>
+            <td>SPattack: <%=pokemon.stats.spattack%></td><br>
+            <td>SPdefense: <%=pokemon.stats.spdefense%></td><br>
+            <td>Speed: <%=pokemon.stats.speed%></td>
+        </tr><br><br>
+        <a href="/pokemon/<%=index%>/edit"><button id="edit">Edit</button></a>
+        <br><a href="/pokemon"><button>Return back to Pokedex</button></a>
+        
+    </div>
+</body>
+</html>
